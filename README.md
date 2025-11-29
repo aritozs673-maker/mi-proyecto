@@ -1,1 +1,2 @@
 "#Mi proyecto final"
+Mi proyecto final se trata de un diseño de una pagina web tipo "Starbucks", me estoy inspirando en algo similar a su pagina principal pero mas sencillo y las bebidas que estoy seleccionando tienen que ver con navidad ya que estamos en estas fechas.
