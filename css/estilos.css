@@ -74,6 +74,7 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(90, 61, 130, 0.2);
 }
 
+
 .inicio img {
     width: 80%;
     max-width: 500px;
@@ -109,6 +110,11 @@ nav ul li a:hover {
 
 /* MENÚ PRINCIPAL */
 .MenuPriincipal {
+    text-align: center;
+    margin: 35px 0 10px 0;
+    color: #5A3D82;
+}
+.PromosInicio {
     text-align: center;
     margin: 35px 0 10px 0;
     color: #5A3D82;
