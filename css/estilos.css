@@ -16,38 +16,34 @@ header {
     padding: 10px 20px;
     background-color: #D6C4F0;
     border-bottom: 2px solid #B8A0E0;
-
-    /* 👉 QUITAMOS espacio extra */
     gap: 15px;
 }
 
 .logo img {
-    width: 70px;      /* 👉 Más pequeño, como el modelo */
+    width: 70px;  
     height: auto;
 }
 
 header h1 {
-    font-size: 22px;  /* 👉 Más compacto */
-    margin-right: auto; /* 👉 Empuja el menú a la derecha (como en el modelo) */
+    font-size: 22px;
+    margin-right: auto;
     font-weight: bold;
     color: #5A3D82;
 }
 
-/* NAV */
-
 .bloqueado {
-    pointer-events: none; /* No se puede hacer click */
-    opacity: 0.5; /* Se ve desactivado */
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 18px;     /* 👉 Separación parecida al header blanco/negro */
+    gap: 18px;
 }
 
 nav ul li a {
-    font-size: 14px;      /* 👉 Compacto, estilo modelo */
+    font-size: 14px; 
     font-weight: bold;
     color: #5A3D82;
     transition: 0.3s;
@@ -106,7 +102,6 @@ nav ul li a:hover{
     background-color: #5A3D82;
 }
 
-/* TÍTULOS DE SECCIÓN */
 .MenuPriincipal,
 .PromosInicio,
 .Postres,
@@ -117,7 +112,6 @@ nav ul li a:hover{
     color: #5A3D82;
 }
 
-/* CONTENEDORES DE PRODUCTOS */
 .Navidad,
 .bebidasC,
 .bebidasF,
@@ -158,8 +152,6 @@ nav ul li a:hover{
     transform: scale(1.05);
     box-shadow: 0px 6px 18px rgba(90, 61, 130, 0.4);
 }
-
-
 
 .Navidad img,
 .bebidasC img,
