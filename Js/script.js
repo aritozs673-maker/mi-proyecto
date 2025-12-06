@@ -1,48 +1,49 @@
-// ---------------------
-// Bloquear páginas si no hay sesión
-// ---------------------
-function checkLogin() {
-    const logged = localStorage.getItem("logueado");
+// Bloquear paginas si no hay sesion
 
-    // Si no está logueado y no está en la página de inicio => volver a inicio
-    if (!logged && !window.location.href.includes("inicio.html") && !window.location.href.endsWith("/")) {
-        alert("⚠ Debes iniciar sesión para acceder al menú y promociones");
+function InicioSesion() {
+    const inicia = localStorage.getItem("Iniciando...");
+
+// Si no está iniciando y no está en la página de inicio => volver a inicio
+
+    if (!inicia && !window.location.href.includes("inicio.html") && !window.location.href.endsWith("/")) {
+        alert("Debes iniciar sesión para acceder a la pagina");
         window.location.href = "inicio.html";
     }
 }
 
-checkLogin();
+InicioSesion();
 
-// ---------------------
-// Iniciar sesión básico
-// ---------------------
-const btnLogin = document.querySelector('.button');
-if (btnLogin) {
-    btnLogin.addEventListener('click', function(e) {
-        e.preventDefault(); // Evita refrescar
 
-        const email = document.getElementById("correo").value;
-        const pass = document.getElementById("contraseña").value;
+// Iniciar sesión
 
-        if (email === "" || pass === "") {
-            alert("Por favor, completa todos los campos");
+const Iniciar = document.querySelector('.button');
+if (Iniciar) {
+    Iniciar.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const correo = document.getElementById("correo").value;
+        const contra = document.getElementById("contraseña").value;
+
+        if (correo === "" || contra === "") {
+            alert("Por favor complete todos los campos");
             return;
         }
 
         // Guardamos la sesión
-        localStorage.setItem("logueado", "true");
-        alert("¡Bienvenido a StearWay! 👋");
+        localStorage.setItem("Iniciando...", "true");
+        alert("¡Bienvenido a StearWay North Pole!");
 
         // Redirige automáticamente
         window.location.href = "menu.html";
     });
 }
 
-// ---------------------
-// Abrir / cerrar menú hamburguesa
-// ---------------------
-function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
-}
 
+// --- MENÚ HAMBURGUESA ---
+
+const botonHamburguesa = document.getElementById("menuha");
+const ventana = document.getElementById("ventanas");
+
+botonHamburguesa.addEventListener("click", () => {
+    ventana.classList.toggle("activo");
+});

@@ -229,6 +229,7 @@ nav ul li a:hover{
     color: #5A3D82;
 }
 
+
 /* TABLET */ 
 @media (max-width: 900px) { 
     .Navidad, 
@@ -259,6 +260,23 @@ nav ul li a:hover{
 
 /* CELULAR */ 
 @media (max-width: 600px) { 
+
+    #ventanas {
+        display: none;
+        flex-direction: column;
+        background: #7C5AA5;
+        padding: 10px;
+    }
+
+    #ventanas a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+    #ventanas.activo {
+        display: flex;
+    }
     .menuh { 
         display: block;
     }
