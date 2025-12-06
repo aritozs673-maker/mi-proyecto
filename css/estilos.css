@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -10,56 +9,51 @@ body {
     color: #3A2C4E;
 }
 
+/* HEADER */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 10px 20px;
     background-color: #D6C4F0;
-    padding: 12px 25px;
-    border-bottom: 3px solid #B8A0E0;
-}
+    border-bottom: 2px solid #B8A0E0;
 
-header h1 {
-    color: #5A3D82;
-    font-size: 26px;
-    font-weight: bold;
+    /* 👉 QUITAMOS espacio extra */
+    gap: 15px;
 }
 
 .logo img {
-    width: 50px;
+    width: 70px;      /* 👉 Más pequeño, como el modelo */
+    height: auto;
+}
+
+header h1 {
+    font-size: 22px;  /* 👉 Más compacto */
+    margin-right: auto; /* 👉 Empuja el menú a la derecha (como en el modelo) */
+    font-weight: bold;
+    color: #5A3D82;
+}
+
+/* NAV */
+
+.bloqueado {
+    pointer-events: none; /* No se puede hacer click */
+    opacity: 0.5; /* Se ve desactivado */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 18px;     /* 👉 Separación parecida al header blanco/negro */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #5A3D82;
+    font-size: 14px;      /* 👉 Compacto, estilo modelo */
     font-weight: bold;
-    transition: 0.3s;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    height: 3px;
-    width: 0;
-    background-color: #7C5AA5;
+    color: #5A3D82;
     transition: 0.3s;
 }
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #7C5AA5;
+nav ul li a:hover{
+    color: #181022;
 }
 
 /* INICIO */
@@ -69,29 +63,32 @@ nav ul li a:hover {
     background: white;
     border-radius: 12px;
     width: 90%;
-    max-width: 800px;
+    max-width: 950px;
     margin: 25px auto;
     box-shadow: 0 0 10px rgba(90, 61, 130, 0.2);
 }
 
-
 .inicio img {
     width: 80%;
-    max-width: 500px;
+    max-width: 900px;
+    transition: 0.3s;
 }
 
+.inicio img:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
 .inicio h2 {
     margin-top: 15px;
     color: #5A3D82;
-    font-size: 28px;
 }
 
 .inicio p {
     width: 70%;
-    margin: auto;
-    margin-top: 10px;
+    margin: 10px auto;
     font-size: 16px;
 }
+
 
 .ver {
     display: inline-block;
@@ -105,31 +102,22 @@ nav ul li a:hover {
 }
 
 .ver:hover {
+    transform: scale(1.05);
     background-color: #5A3D82;
 }
 
-/* MENÚ PRINCIPAL */
-.MenuPriincipal {
-    text-align: center;
-    margin: 35px 0 10px 0;
-    color: #5A3D82;
-}
-.PromosInicio {
-    text-align: center;
-    margin: 35px 0 10px 0;
-    color: #5A3D82;
-}
-.Postres {
-    text-align: center;
-    margin: 35px 0 10px 0;
-    color: #5A3D82;
-}
-.Ofertas {
+/* TÍTULOS DE SECCIÓN */
+.MenuPriincipal,
+.PromosInicio,
+.Postres,
+.Ofertas,
+.InicioSesion {
     text-align: center;
     margin: 35px 0 10px 0;
     color: #5A3D82;
 }
 
+/* CONTENEDORES DE PRODUCTOS */
 .Navidad,
 .bebidasC,
 .bebidasF,
@@ -139,9 +127,7 @@ nav ul li a:hover {
 .InicioP {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
     gap: 25px;
-    overflow-x: auto;
     padding: 20px;
 }
 
@@ -152,14 +138,28 @@ nav ul li a:hover {
 .Postre div,
 .Oferta div,
 .InicioP div {
-    text-align: center;
-    background: #fff;
+    background: white;
     border: 2px solid #B8A0E0;
     border-radius: 12px;
     padding: 12px;
     width: 100%;
+    text-align: center;
     transition: 0.3s;
+    box-shadow: 0.3s;
 }
+
+.Navidad div:hover,
+.bebidasC div:hover,
+.bebidasF div:hover,
+.navidad div:hover,
+.Postre div:hover,
+.Oferta div:hover,
+.InicioP div:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 18px rgba(90, 61, 130, 0.4);
+}
+
+
 
 .Navidad img,
 .bebidasC img,
@@ -173,21 +173,10 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.Navidad img:hover,
-.bebidasC div:hover,
-.bebidasF div:hover,
-.navidad div:hover,
-.Postre div:hover,
-.Oferta div:hover {
-    min-width: 280px;
-    transform: scale(1.06);
-    box-shadow: 0 0 12px rgba(90, 61, 130, 0.4);
-}
-
 /* FORMULARIO */
-.InicioSesion {
+.InicioSesion{
     text-align: center;
-    margin: 35px 0 10px 0;
+    padding: 20px;
     color: #5A3D82;
 }
 
@@ -212,34 +201,35 @@ nav ul li a:hover {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
-
 .button:hover {
+    transform: scale(1.05);
     background-color: #5A3D82;
 }
 
 /* FOOTER */
 .PiePag {
     background-color: #D6C4F0;
-    color: #5A3D82;
+    color: #3A2C4E;
     display: flex;
-    justify-content: space-around;
-    padding: 25px 10px;
-    margin-top: 40px;
+    gap: 100px; 
+    padding: 40px;
+    flex-wrap: wrap;
     border-top: 3px solid #B8A0E0;
+    width: 100%;
 }
 
 .PiePag h4 {
-    margin-bottom: 5px;
-    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .PiePag p {
     font-size: 14px;
 }
 
-/* MENU HAMBURGUESA */
+
 .menuh {
     display: none;
     cursor: pointer;
@@ -247,81 +237,76 @@ nav ul li a:hover {
     color: #5A3D82;
 }
 
-
-/* TABLET */
-@media (max-width: 900px) {
-
-    .Navidad,
-    .bebidasC,
-    .bebidasF,
-    .navidad,
-    .Postre,
-    .Oferta,
-    .InicioP {
+/* TABLET */ 
+@media (max-width: 900px) { 
+    .Navidad, 
+    .bebidasC, 
+    .bebidasF, 
+    .navidad, 
+    .Postre, 
+    .Oferta, 
+    .InicioP { 
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .Navidad div,
-    .bebidasC div,
+        justify-content: center; 
+    } 
+    
+    .Navidad div, 
+    .bebidasC div, 
     .bebidasF div,
-    .navidad div,
-    .Postre div,
-    .Oferta div,
+    .navidad div, 
+    .Postre div, 
+    .Oferta div, 
     .InicioP div {
-        width: 45%;
-    }
-
+         width: 45%;
+     } 
     .PiePag {
-        flex-wrap: wrap;
-        text-align: center;
-    }
+         flex-wrap: wrap; 
+         text-align: center; 
+    } 
 }
 
-/* CELULAR */
-@media (max-width: 600px) {
-
-    .menuh {
+/* CELULAR */ 
+@media (max-width: 600px) { 
+    .menuh { 
         display: block;
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
-        background: #D6C4F0;
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 2px solid #B8A0E0;
+        display: none; 
+        flex-direction: column; 
+        background: #D6C4F0; 
+        width: 100%; padding: 10px 0; 
+        border-bottom: 2px solid #B8A0E0; 
     }
+    
+    nav .active ul{
+        display: flex; 
+    } 
 
-    nav ul.active {
-        display: flex;
-    }
-
-    .Navidad div,
-    .bebidasC div,
-    .bebidasF div,
-    .navidad div,
-    .Postre div,
-    .Oferta div,
+    .Navidad div, 
+    .bebidasC div, 
+    .bebidasF div, 
+    .navidad div, 
+    .Postre div, 
+    .Oferta div, 
     .InicioP div {
-        width: 90%;
-    }
+        width: 90%; 
+    } 
 
-    .Navidad,
-    .bebidasC,
-    .bebidasF,
-    .navidad,
-    .Postre,
-    .Oferta,
+    .Navidad, 
+    .bebidasC, 
+    .bebidasF, 
+    .navidad, 
+    .Postre, 
+    .Oferta, 
     .InicioP {
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: column; 
+        flex-wrap: nowrap; 
     }
 
-    .PiePag {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+    .PiePag { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 10px; 
+    } 
 }
