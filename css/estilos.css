@@ -207,7 +207,7 @@ nav ul li a:hover{
     display: flex;
     gap: 100px; 
     padding: 40px;
-    flex-wrap: wrap;
+    flex: wrap;
     border-top: 3px solid #B8A0E0;
     width: 100%;
 }
@@ -231,7 +231,7 @@ nav ul li a:hover{
 
 
 /* TABLET */ 
-@media (max-width: 900px) { 
+@media (max-width: 1024px) { 
     .Navidad, 
     .bebidasC, 
     .bebidasF, 
@@ -239,7 +239,7 @@ nav ul li a:hover{
     .Postre, 
     .Oferta, 
     .InicioP { 
-        flex-wrap: wrap;
+        flex: wrap;
         justify-content: center; 
     } 
     
@@ -253,45 +253,62 @@ nav ul li a:hover{
          width: 45%;
      } 
     .PiePag {
-         flex-wrap: wrap; 
+         flex: wrap; 
          text-align: center; 
     } 
 }
 
 /* CELULAR */ 
-@media (max-width: 600px) { 
+@media (max-width: 550px) { 
 
-    #ventanas {
+    /* Mostrar el icono hamburguesa */
+    .menuh {
+        display: block;
+        font-size: 30px;
+        padding: 10px 15px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* Menú oculto por defecto */
+    nav ul {
         display: none;
+        position: absolute;
+        top: 65px; /* debajo del header */
+        left: 10px;
+        background-color: #fff;
+        width: 220px;
+        padding: 15px;
         flex-direction: column;
-        background: #7C5AA5;
-        padding: 10px;
+        gap: 10px;
+        border-radius: 12px;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
-    #ventanas a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 0;
-    }
-
-    #ventanas.activo {
+    /* Cuando el menú está activo */
+    nav.ventanas ul {
         display: flex;
     }
-    .menuh { 
-        display: block;
+
+    /* Estilo de enlaces */
+    nav ul li a {
+        color: #5a3d84;
+        font-weight: bold;
+        font-size: 17px;
+        text-decoration: none;
     }
 
-    nav ul {
-        display: none; 
-        flex-direction: column; 
-        background: #D6C4F0; 
-        width: 100%; padding: 10px 0; 
-        border-bottom: 2px solid #B8A0E0; 
+    nav ul li a:hover {
+        text-decoration: underline;
     }
-    
-    nav .active ul{
-        display: flex; 
-    } 
+
+    /* Quitar margen del menú horizontal */
+    nav ul li {
+        margin: 0;
+    }
+
+
 
     .Navidad div, 
     .bebidasC div, 
@@ -311,12 +328,13 @@ nav ul li a:hover{
     .Oferta, 
     .InicioP {
         flex-direction: column; 
-        flex-wrap: nowrap; 
+        flex: nowrap; 
     }
 
     .PiePag { 
-        flex-direction: column; 
-        text-align: center; 
+        flex-direction: column;
+        text-align: left; 
+        margin: 0;
         gap: 10px; 
     } 
 }
