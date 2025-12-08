@@ -39,11 +39,7 @@ if (Iniciar) {
 }
 
 
-// --- MENÚ HAMBURGUESA ---
-
-const botonHamburguesa = document.getElementById("menuha");
-const ventana = document.getElementById("ventanas");
-
-botonHamburguesa.addEventListener("click", () => {
-    ventana.classList.toggle("activo");
-});
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("ventanas");
+}
