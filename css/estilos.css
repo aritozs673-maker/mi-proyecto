@@ -239,7 +239,7 @@ nav ul li a:hover{
     .Postre, 
     .Oferta, 
     .InicioP { 
-        flex: wrap;
+        flex-wrap: wrap;
         justify-content: center; 
     } 
     
@@ -253,7 +253,7 @@ nav ul li a:hover{
          width: 45%;
      } 
     .PiePag {
-         flex: wrap; 
+         flex-wrap: wrap; 
          text-align: center; 
     } 
 }
