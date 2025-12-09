@@ -5,7 +5,7 @@ function InicioSesion() {
 
 // Si no está iniciando y no está en la página de inicio => volver a inicio
 
-    if (!inicia && !window.location.href.includes("inicio.html") && !window.location.href.endsWith("/")) {
+    if (!inicia && !window.location.href.includes("inicio.html")) {
         alert("Debes iniciar sesión para acceder a la pagina");
         window.location.href = "inicio.html";
     }

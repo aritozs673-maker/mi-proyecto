@@ -207,7 +207,7 @@ nav ul li a:hover{
     display: flex;
     gap: 100px; 
     padding: 40px;
-    flex: wrap;
+    flex-wrap: wrap;
     border-top: 3px solid #B8A0E0;
     width: 100%;
 }
@@ -274,7 +274,7 @@ nav ul li a:hover{
     nav ul {
         display: none;
         position: absolute;
-        top: 65px; /* debajo del header */
+        top: 65px;
         left: 10px;
         background-color: #fff;
         width: 220px;
@@ -291,7 +291,6 @@ nav ul li a:hover{
         display: flex;
     }
 
-    /* Estilo de enlaces */
     nav ul li a {
         color: #5a3d84;
         font-weight: bold;
@@ -303,12 +302,9 @@ nav ul li a:hover{
         text-decoration: underline;
     }
 
-    /* Quitar margen del menú horizontal */
     nav ul li {
         margin: 0;
     }
-
-
 
     .Navidad div, 
     .bebidasC div, 
