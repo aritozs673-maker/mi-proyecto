@@ -1,3 +1,4 @@
+
 // Bloquear paginas si no hay sesion
 
 function InicioSesion() {
