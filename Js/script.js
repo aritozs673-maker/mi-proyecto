@@ -1,6 +1,9 @@
+
 // Verificar sesión 
 function IniciaSesion() {
 
+
+// Bloquear paginas si no hay sesion
     let sesion = localStorage.getItem("sesionActiva");
 
     if (sesion !== "true" && !window.location.href.includes("index.html")) {
@@ -8,7 +11,12 @@ function IniciaSesion() {
 
         // Te lleva a la sección de registrarse
         window.location.href = "index.html#Registras";
+
+    if (!inicia && !window.location.href.includes("index.html")) {
+        alert("Debes iniciar sesión para acceder a la pagina");
+        window.location.href = "index.html";
     }
+}
 }
 
 IniciaSesion();
@@ -53,7 +61,6 @@ function iniciarSesion(event) {
     }
 }
 
-// --- CARRITO SUPER SIMPLE --- //
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // ACTUALIZAR NUMERO DEL CARRITO
@@ -71,7 +78,6 @@ function agregarAlCarrito(nombre, precio) {
     actualizarContador();
 }
 
-// MOSTRAR LISTA EN carrito.html
 function mostrarCarrito() {
     let lista = document.getElementById("listaCarrito");
     let totalTexto = document.getElementById("total");
@@ -95,14 +101,12 @@ function mostrarCarrito() {
     actualizarContador();
 }
 
-// VACIAR
 function vaciarCarrito() {
     carrito = [];
     localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarCarrito();
 }
 
-// Actualizar al cargar la página
 actualizarContador();
 mostrarCarrito();
 
