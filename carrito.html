@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
      <!-- Palabras clave relacionadas con la página -->
     <meta name="keywords" content="StearWay, café, bebidas, postres, promociones, menú, cafetería">
-    <title>Promociones |StearWay|</title>
-    <meta name="description" content="Aprovecha las promos de StearWay: 2x1 en bebidas y combos especiales.">
+    <title>Carrito de Compras | StearWay</title>
+    <meta name="description" content="Postres deliciosos hechos para acompañar tu café favorito.">
 
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
+
 <body>
 
 <header>
@@ -20,7 +19,8 @@
     <div class="logo">
         <img src="img/logos.png" alt="LogoS" class="logo">
     </div>
-    <h1>Promociones</h1>
+
+    <h1>Carrito de Compras</h1>
     <nav id="ventanas">
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -32,29 +32,13 @@
     </nav>
 </header>
 
-<h2 class="Ofertas">Ofertas del Mes</h2>
+<section class="carrito">
+    <div id="listaCarrito"></div>
+    <h3 id="total"></h3>
 
-<section class="Oferta">
-    <div class="Oferta">
-        <img src="img/Promos1.png">
-        <h4>2x1 en Latte</h4>
-        <p class="precio">25 Bs</p>
-        <button onclick="agregarAlCarrito('Promo 2x1 Latte', 28)" class="Comprar">Comprar</button>
-    </div>
-
-    <div class="Oferta">
-        <img src="img/Promos2.png">
-        <h4>Postre + Bebida 30% OFF</h4>
-        <p class="precio">28 Bs</p>
-        <button onclick="agregarAlCarrito('Combo Postre + Bebida', 25)" class="Comprar">Comprar</button>
-    </div>
-
-    <div class="Oferta">
-        <img src="img/PromoN.png">
-        <h4>Bebidas Navideñas</h4>
-        <p class="precio">23 Bs</p>
-        <button onclick="agregarAlCarrito('Promo Bebidas Navideñas', 20)" class="Comprar">Comprar</button>
-    </div>
+    <button onclick="vaciarCarrito()" class="eliminar">
+        Vaciar Carrito
+    </button>
 </section>
 
 <footer class="PiePag">
@@ -93,5 +77,6 @@
     </div>
 </footer>
     <script src="Js/script.js"></script>
+
 </body>
 </html>

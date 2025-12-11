@@ -21,10 +21,11 @@
     <h1>Menu Postres</h1>
     <nav id="ventanas">
         <ul>
-            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="menu.html">Menu Bebidas</a></li>
             <li><a href="postres.html">Menu Postres</a></li>
             <li><a href="promos.html">Promos</a></li>
+            <li><a href="carrito.html">Carrito <span id="contadorCarrito"></span></a></li>
         </ul>
     </nav>
 </header>
@@ -32,25 +33,32 @@
 <h2 class="Postres">Postres Deliciosos</h2>
 
 <section class="Postre">
-    <div>
+    <div class="Postre">
         <img src="img/PostreT.png">
         <h4>Cheesecake</h4>
-        <p>Cremoso y dulce con salsa de frutos rojos</p>
+        <p class="precio">15 Bs</p>
+        <button onclick="agregarAlCarrito('Cheesecake', 15)" class="Comprar">Comprar</button>
     </div>
-    <div>
+
+    <div class="Postre">
         <img src="img/PostreM.png">
         <h4>Muffin de Chocolate</h4>
-        <p>Suave con trozos de chocolate</p>
+        <p class="precio">12 Bs</p>
+        <button onclick="agregarAlCarrito('Muffin de Chocolate', 10)" class="Comprar">Comprar</button>
     </div>
-    <div>
+
+    <div class="Postre">
         <img src="img/PostreG.png">
         <h4>Galleta Choco Chips</h4>
-        <p>Crocante y deliciosa</p>
+        <p class="precio">10 Bs</p>
+        <button onclick="agregarAlCarrito('Galleta Choco Chips', 8)" class="Comprar">Comprar</button>
     </div>
-    <div>
+
+    <div class="Postre">
         <img src="img/PostreR.png">
         <h4>Rollito de Canela</h4>
-        <p>Clásico dulce recién horneado</p>
+        <p class="precio">12 Bs</p>
+        <button onclick="agregarAlCarrito('Rollito de Canela', 12)" class="Comprar">Comprar</button>
     </div>
 </section>
 
@@ -78,6 +86,15 @@
         <p>Instagram</p>
         <p>Facebook</p>
         <p>TikTok</p>
+    </div>
+    <div class="manuales">
+        <h4>MANUALES</h4>
+            <a href="Manuales/ManualTecnico.pdf" target="_blank" class="manual">
+                Manual Técnico
+            </a>
+            <a href="Manuales/ManualUsuario.pdf" target="_blank" class="manual">
+                Manual Usuario
+            </a>
     </div>
 </footer>
     <script src="Js/script.js"></script>

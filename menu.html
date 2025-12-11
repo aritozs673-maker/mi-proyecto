@@ -21,36 +21,108 @@
     <h1>Menu Bebidas</h1>
     <nav id="ventanas">
         <ul>
-            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="menu.html">Menu Bebidas</a></li>
             <li><a href="postres.html">Menu Postres</a></li>
             <li><a href="promos.html">Promos</a></li>
+            <li><a href="carrito.html">Carrito <span id="contadorCarrito"></span></a></li>
         </ul>
     </nav>
 </header>
 
 <h2 class="bebidasC">Bebidas Calientes</h2>
 <section class="bebidasC">
-    <div><img src="img/Caliente1.png"><h4>Latte</h4></div>
-    <div><img src="img/Caliente2.png"><h4>Mocha</h4></div>
-    <div><img src="img/Caliente3.png"><h4>Caramel Macchiato</h4></div>
-    <div><img src="img/Caliente4.png"><h4>Americano</h4></div>
+    <div class="bebidasC">
+        <img src="img/Caliente1.png">
+        <h4>Latte</h4>
+        <p class="precio">14 Bs</p>
+        <button onclick="agregarAlCarrito('Latte', 14)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasC">
+        <img src="img/Caliente2.png">
+        <h4>Mocha</h4>
+        <p class="precio">16 Bs</p>
+        <button onclick="agregarAlCarrito('Mocha', 16)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasC">
+        <img src="img/Caliente3.png">
+        <h4>Caramel Macchiato</h4>
+        <p class="precio">18 Bs</p>
+        <button onclick="agregarAlCarrito('Caramel Macchiato', 18)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasC">
+        <img src="img/Caliente4.png">
+        <h4>Americano</h4>
+        <p class="precio">10 Bs</p>
+        <button onclick="agregarAlCarrito('Americano', 10)" class="Comprar">Comprar</button>
+    </div>
 </section>
+
 
 <h2 class="bebidasF">Bebidas Frías</h2>
 <section class="bebidasF">
-    <div><img src="img/Fria1.png"><h4>Frappe</h4></div>
-    <div><img src="img/Fria2.png"><h4>Iced Latte</h4></div>
-    <div><img src="img/Fria3.png"><h4>Matcha Ice</h4></div>
-    <div><img src="img/Fria4.png"><h4>Chocolate Ice</h4></div>
+    <div class="bebidasF">
+        <img src="img/Fria1.png">
+        <h4>Frappe</h4>
+        <p class="precio">20 Bs</p>
+        <button onclick="agregarAlCarrito('Frappe', 20)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasF">
+        <img src="img/Fria2.png">
+        <h4>Iced Latte</h4>
+        <p class="precio">15 Bs</p>
+        <button onclick="agregarAlCarrito('Iced Latte', 15)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasF">
+        <img src="img/Fria3.png">
+        <h4>Matcha Ice</h4>
+        <p class="precio">18 Bs</p>
+        <button onclick="agregarAlCarrito('Matcha Ice', 18)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="bebidasF">
+        <img src="img/Fria4.png">
+        <h4>Chocolate Ice</h4>
+        <p class="precio">17 Bs</p>
+        <button onclick="agregarAlCarrito('Chocolate Ice', 17)" class="Comprar">Comprar</button>
+    </div>
 </section>
+
 
 <h2 class="Navidad" id="navidad">Especiales de Navidad</h2>
 <section class="navidad">
-    <div><img src="img/Navidad1.png"><h4>Gingerbread Latte</h4></div>
-    <div><img src="img/Navidad2.png"><h4>Red Candy Ice</h4></div>
-    <div><img src="img/Navidad3.png"><h4>Toffee Nut Latte</h4></div>
-    <div><img src="img/Navidad4.png"><h4>Red Candy Ice</h4></div>
+    <div class="navidad">
+        <img src="img/Navidad1.png">
+        <h4>Gingerbread Latte</h4>
+        <p class="precio">23 Bs</p>
+        <button onclick="agregarAlCarrito('Gingerbread Latte', 22)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="navidad">
+        <img src="img/Navidad2.png">
+        <h4>Red Candy Ice</h4>
+        <p class="precio">23 Bs</p>
+        <button onclick="agregarAlCarrito('Red Candy Ice', 20)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="navidad">
+        <img src="img/Navidad3.png">
+        <h4>Toffee Nut Latte</h4>
+        <p class="precio">23 Bs</p>
+        <button onclick="agregarAlCarrito('Toffee Nut Latte', 23)" class="Comprar">Comprar</button>
+    </div>
+
+    <div class="navidad">
+        <img src="img/Navidad4.png">
+        <h4>Red Christmas Latte</h4>
+        <p class="precio">23 Bs</p>
+        <button onclick="agregarAlCarrito('Red Christmas Latte', 22)" class="Comprar">Comprar</button>
+    </div>
 </section>
 
 <footer class="PiePag">
@@ -77,6 +149,15 @@
         <p>Instagram</p>
         <p>Facebook</p>
         <p>TikTok</p>
+    </div>
+    <div class="manuales">
+        <h4>MANUALES</h4>
+            <a href="Manuales/ManualTecnico.pdf" target="_blank" class="manual">
+                Manual Técnico
+            </a>
+            <a href="Manuales/ManualUsuario.pdf" target="_blank" class="manual">
+                Manual Usuario
+            </a>
     </div>
 </footer>
 

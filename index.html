@@ -22,10 +22,11 @@
     
     <nav id="ventanas">
         <ul>
-            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="menu.html">Menu Bebidas</a></li>
             <li><a href="postres.html">Menu Postres</a></li>
             <li><a href="promos.html">Promos</a></li>
+            <li><a href="carrito.html">Carrito <span id="contadorCarrito"></span></a></li>
         </ul>
     </nav>
 </header>
@@ -77,7 +78,20 @@
     
 </section>
 
-<h2 class="InicioSesion">Iniciar Sesión</h2>
+<h2 class="Registro" id="Registras">Crear Cuenta</h2>
+<section class="Formulario">
+    <form id="registroForm">
+        <label><strong>Correo:</strong></label><br>
+        <input type="email" id="regCorreo"><br>
+
+        <label><strong>Contraseña:</strong></label><br>
+        <input type="password" id="regContra"><br>
+
+        <button class="Registrado" type="button" onclick="registrar()">Registrarse</button>
+    </form>
+</section>
+
+<h2 class="InicioSesion" id="iniciarsesion">Iniciar Sesión</h2>
 
 <section class="Formulario">
     <form>
@@ -87,7 +101,7 @@
         <label for="contraseña"><strong>Contraseña:</strong></label><br>
         <input type="password" id="contraseña"><br>
 
-        <button class="button" type="submit">Iniciar Sesión</button>
+        <button class="button" onclick="iniciarSesion(event)">Iniciar Sesión</button>
     </form>
 </section>
 
@@ -115,6 +129,15 @@
         <p>Instagram</p>
         <p>Facebook</p>
         <p>TikTok</p>
+    </div>
+    <div class="manuales">
+        <h4>MANUALES</h4>
+            <a href="Manuales/ManualTecnico.pdf" target="_blank" class="manual">
+                Manual Técnico
+            </a>
+            <a href="Manuales/ManualUsuario.pdf" target="_blank" class="manual">
+                Manual Usuario
+            </a>
     </div>
 </footer>
 
