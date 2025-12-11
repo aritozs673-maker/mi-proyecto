@@ -31,11 +31,6 @@ header h1 {
     color: #5A3D82;
 }
 
-.bloqueado {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
 nav ul {
     list-style: none;
     display: flex;
